@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS B</title>
-  </head>
-  <body>
-    <script>
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>JS B</title>
+     </head>
+     <body>
+          <script>
+               let moneyFirst = 5;
+               let sumMoney = moneyFirst;
+               console.log("0. " + moneyFirst + " " + sumMoney);
+               for (let a = 0; a < 10; a++) {
+                    moneyFirst *= 2;
+                    sumMoney += moneyFirst;
+                    console.log(a + 1 + ". " + moneyFirst + " " + sumMoney);
+               }
+          </script>
+
+          <!-- <script>
       "use strict";
 
       alert("Задание 1.");
@@ -65,6 +79,6 @@
 
       result = 10 / +"2,5";
       console.log(result);
-    </script>
-  </body>
+    </script> -->
+     </body>
 </html>
