@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>JS B</title>
+     </head>
+     <body>
+          <script>
+               let moneyFirst = 5;
+               let sumMoney = moneyFirst;
+               console.log("0. " + moneyFirst + " " + sumMoney);
+               for (let a = 0; a < 10; a++) {
+                    moneyFirst *= 2;
+                    sumMoney += moneyFirst;
+                    console.log(a + 1 + ". " + moneyFirst + " " + sumMoney);
+               }
+          </script>
+
+          <!-- <script>
+      "use strict";
+
+      alert("Задание 1.");
+
+      let Tc = +prompt("Введите температуру в градусах по Цельсию: ");
+      let Tf = (9 / 5) * Tc + 32;
+      alert(`Температура в градусах по Фаренгейту составляет: ${Tf}`);
+
+      alert("Задание 2.");
+
+      let admin = null;
+      let name = "Василий";
+      admin = name;
+      console.log(admin);
+
+      alert("Задание 3.");
+
+      /* 
+      1. Получится 2010, потому что числовые значения 10 + 10 сложатся
+      2. Далее произойдет приведение 20 к типу строки
+      3. Затем произойдет конкатенация двух строк
+        */
+      let result = 10 + 10 + "10";
+      console.log(result);
+
+      /*
+        1. Получится 101010, т.к.
+        2. 1-ая 10-ка станет строкой
+        3. Произойдет конкатенация строк
+        4. Затем последняя 10 тоже стнанет строкой
+        5. Опять конкатенация
+        */
+      result = 10 + "10" + 10;
+      console.log(result);
+
+      /* 
+        1. Получится 30
+        2. Сначлаа сложится два числа
+        3. Затем произойдет использование унарного плюса, что является приведением к типу чисел
+        4. И снова сложение двух чисел
+       */
+      result = 10 + 10 + +"10";
+      console.log(result);
+
+      /* 
+        1. Происходит приведение к отрицательному числу из-за унарного минуса, т.к. поле пустое, оно считается за 0
+        2. 10 / -0, получается -Infinity
+       */
+      result = 10 / -"";
+      console.log(result);
+
+      /* 1. Будет произведена попытка приведения к численному типу, но т.к. там стоит , , а не ., там будет NaN
+        2. Деление тоже ни к чему не приведет, так и останется результат NaN
+        */
+
+      result = 10 / +"2,5";
+      console.log(result);
+    </script> -->
+     </body>
+</html>
