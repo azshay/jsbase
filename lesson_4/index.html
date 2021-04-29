@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Lesson4</title>
+     </head>
+     <body>
+          <script>
+               "use strict";
+
+               function Product(name, price) {
+                    this.name = name;
+                    this.price = price;
+               }
+
+               Product.prototype.make25PercentDiscount = function () {
+                    this.price = this.price * 0.75;
+               };
+
+               class ProductEs6 {
+                    constructor(name, price) {
+                         this.name = name;
+                         this.price = price;
+                    }
+
+                    make25PercentDiscountES6() {
+                         this.price = this.price * 0.75;
+                    }
+               }
+
+               // 1.2
+
+               function PostEs5(author, text, date) {
+                    this.author = author;
+                    this.text = text;
+                    this.date = date;
+               }
+
+               PostEs5.prototype.edit = function (text) {
+                    this.text = text;
+               };
+
+               function AttachedPost(author, text, date, highlighted) {
+                    PostEs5.call(this, author, text, date);
+                    this.highlighted = false;
+               }
+
+               AttachedPost.prototype.makeHighlighted = function () {
+                    this.highlighted = true;
+               };
+
+               AttachedPost.prototype = Object.create(PostEs5.prototype);
+               AttachedPost.prototype.constructor = AttachedPost;
+
+               class PostEs6 {
+                    constructor(author, text, date) {
+                         this.author = author;
+                         this.text = text;
+                         this.date = date;
+                    }
+
+                    edit(text) {
+                         this.text = text;
+                    }
+               }
+
+               class AttachedPostEs6 extends PostEs6 {
+                    constructor(author, text, date) {
+                         super(author, text, date);
+                         this.highlighted = false;
+                    }
+
+                    makeHighlightedEs6() {
+                         this.highlighted = true;
+                    }
+               }
+          </script>
+     </body>
+</html>
