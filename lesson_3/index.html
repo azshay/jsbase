@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Lesson-3</title>
+     </head>
+     <body>
+          <script>
+               "use strict";
+
+               function evenOdd(quantity) {
+                    for (let i = 0; i < quantity; i++) {
+                         if (i == 0) {
+                              console.log(`${i} - это ноль`);
+                         } else if (i % 2 == 1) {
+                              console.log(`${i} - нечетное число`);
+                         } else {
+                              console.log(`${i} - четное число`);
+                         }
+                    }
+               }
+
+               evenOdd(11);
+          </script>
+
+          <script>
+               "use strict";
+
+               const post = {
+                    author: "John", //вывести этот текст
+                    postId: 23,
+                    comments: [
+                         {
+                              userId: 10,
+                              userName: "Alex",
+                              text: "lorem ipsum",
+                              rating: {
+                                   likes: 10,
+                                   dislikes: 2, //вывести это число
+                              },
+                         },
+                         {
+                              userId: 5, //вывести это число
+                              userName: "Jane",
+                              text: "lorem ipsum 2", //вывести этот текст
+                              rating: {
+                                   likes: 3,
+                                   dislikes: 1,
+                              },
+                         },
+                    ],
+               };
+
+               console.log(post.author);
+               console.log(post.comments[0].rating.dislikes);
+               console.log(post.comments[1].userId);
+               console.log(post.comments[1].text);
+          </script>
+
+          <script>
+               function exp3() {
+                    const products = [
+                         {
+                              id: 3,
+                              price: 200,
+                         },
+                         {
+                              id: 4,
+                              price: 900,
+                         },
+                         {
+                              id: 1,
+                              price: 1000,
+                         },
+                    ];
+
+                    products.forEach((item) => {
+                         item.price = item.price * 0.85;
+                    });
+
+                    console.log(products);
+               }
+
+               exp3();
+          </script>
+
+          <script>
+               function exp4() {
+                    const products = [
+                         {
+                              id: 3,
+                              price: 127,
+                              photos: ["1.jpg", "2.jpg"],
+                         },
+                         {
+                              id: 5,
+                              price: 499,
+                              photos: [],
+                         },
+                         {
+                              id: 10,
+                              price: 26,
+                              photos: ["3.jpg"],
+                         },
+                         {
+                              id: 8,
+                              price: 78,
+                         },
+                    ];
+
+                    let photosProducts = products.filter(function (object) {
+                         return (
+                              object.photos != undefined && object.photos != ""
+                         );
+                    });
+
+                    let sortedProducts = products.sort(function (
+                         object1,
+                         object2
+                    ) {
+                         if (object1.price < object2.price) {
+                              return -1;
+                         }
+                         if (object2.price < object1.price) {
+                              return 1;
+                         }
+                         return 0;
+                    });
+
+                    console.log(photosProducts);
+                    console.log(sortedProducts);
+               }
+
+               exp4();
+          </script>
+
+          <script>
+               let w = 0;
+               function exp5() {
+                    console.log(w);
+                    w++;
+               }
+               for (; w < 10; exp5(w)) {}
+          </script>
+
+          <script>
+               function exp6() {
+                    let x = "";
+                    for (let i = 1; i <= 20; i++) {
+                         x += "x";
+                         console.log(x + "\n");
+                    }
+               }
+
+               exp6();
+          </script>
+     </body>
+</html>
